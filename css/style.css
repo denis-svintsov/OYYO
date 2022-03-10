@@ -413,14 +413,6 @@ h6 {
   transition: all 150ms ease;
 }
 
-.tel:active {
-  background: #ea5546;
-}
-
-.tel:active svg {
-  fill: #fff;
-}
-
 .header {
   position: relative;
   top: 0;
@@ -727,6 +719,14 @@ body._lock {
 @media (max-width: 991px) {
   .tel-info__value {
     font-size: 1rem;
+  }
+
+  .tel:active {
+    background: #ea5546;
+  }
+
+  .tel:active svg {
+    fill: #fff;
   }
 
   .header__container {
