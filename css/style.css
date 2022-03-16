@@ -889,18 +889,8 @@ h6 {
   background: #ea5546;
 }
 
-.slider-item-service .swiper-wrapper {
-  width: 100%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .slider-item-service .swiper-slide {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  height: unset;
 }
 
 @font-face {
@@ -1575,6 +1565,11 @@ body._lock {
 
   .slider-item-service .swiper-wrapper {
     gap: 20px;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
