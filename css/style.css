@@ -871,6 +871,7 @@ h6 {
 .slider-item-service .swiper-pagination {
   bottom: 0;
   height: 13px;
+  left: 4%;
 }
 
 .slider-item-service .swiper-pagination-bullet {
@@ -991,7 +992,6 @@ h6 {
 
 .other-services__table th,
 .other-services__table td {
-  display: block;
   text-align: left;
   font-weight: 400;
   line-height: 130%;
