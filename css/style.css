@@ -515,6 +515,53 @@ h6 {
   display: none;
 }
 
+.footer {
+  padding: 20px 0px;
+  border-top: 1px solid #eae9e5;
+}
+
+.footer__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70px 1fr 170px;
+  grid-template-columns: 70px 1fr 170px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: start;
+}
+
+.footer__subtitle {
+  color: #949494;
+  font-size: 0.75rem;
+  line-height: 120%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+.footer__link {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+  margin: 30px 0px 0px 0px;
+  margin-bottom: 10px;
+}
+
+.footer__text {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+}
+
 .page > * {
   margin-bottom: 60px;
 }
@@ -1268,6 +1315,53 @@ body._lock {
 }
 
 @media (min-width: 768px) {
+  .footer {
+    padding: 20px 0px;
+    border-top: 1px solid #eae9e5;
+  }
+
+  .footer__container {
+    -ms-grid-columns: 70px 185px 1fr auto 1fr auto;
+    grid-template-columns: 70px 185px 1fr auto 1fr auto;
+    gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: start;
+  }
+
+  .footer__subtitle {
+    display: inline-block;
+    color: #949494;
+    font-size: 0.75rem;
+    line-height: 120%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    margin-left: 15px;
+  }
+
+  .footer__link {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 1;
+    grid-column: 4/5;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .footer__text {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 1;
+    grid-column: 7/8;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+  }
+
   .header-block__container {
     display: -ms-grid;
     display: grid;
