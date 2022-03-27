@@ -3,9 +3,9 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220327113959" />
-   <link rel="stylesheet" href="css/style.min.css?_v=20220327113959">
-   <script defer="defer" src="js/app.min.js?_v=20220327113959"></script>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220327184715" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20220327184715">
+   <script defer="defer" src="js/app.min.js?_v=20220327184715"></script>
    <title>ОЙЙО</title>
 </head>
 
@@ -495,11 +495,15 @@
                </header>
                <form action="#" class="questions__form form">
                   <div class="form__line">
-                     <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                     <input type="text" class="form__input form__name field" name="name" data-validation="name"
+                        placeholder="Ваше имя">
+                     <label for="after" class="form__check"></label>
                      <label class="input-label">Ваше имя</label>
                   </div>
                   <div class="form__line">
-                     <input type="text" class="form__input" name="phone_number" placeholder="Номер телефона">
+                     <input type="text" class="form__input form__tel field" name="phone_number" data-validation="tel"
+                        placeholder="Номер телефона">
+                     <label for="after" class="form__check"></label>
                      <label class="input-label">Номер телефона</label>
                   </div>
                   <div class="form__line">
@@ -559,7 +563,9 @@
                   </div>
                </div>
                <div class="contacts__map">
-                  <img src="img/contacts/map.jpg" alt="карта">
+                  <iframe
+                     src="https://yandex.ru/map-widget/v1/?um=constructor%3A08c69c52f7c63f9824a5336b15e784bab7485c9bb97421e0b826c16ee30adac8&amp;source=constructor"
+                     width="100%" height="400" frameborder="0"></iframe>
                </div>
             </div>
          </section>
@@ -671,11 +677,15 @@
             </header>
             <form action="#" class="popup__form form">
                <div class="form__line">
-                  <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                  <input type="text" class="form__input form__name field" name="name" data-validation="name"
+                     placeholder="Ваше имя">
+                  <label for="after" class="form__check"></label>
                   <label class="input-label">Ваше имя</label>
                </div>
                <div class="form__line">
-                  <input type="text" class="form__input" name="phone_number" placeholder="Номер телефона">
+                  <input type="text" class="form__input form__tel field" name="phone_number" data-validation="tel"
+                     placeholder="Номер телефона">
+                  <label for="after" class="form__check"></label>
                   <label class="input-label">Номер телефона</label>
                </div>
                <div class="form__line">

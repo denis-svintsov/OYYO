@@ -294,10 +294,11 @@ h6 {
 }
 
 .form__input {
+  position: relative;
   width: 100%;
   font-size: 1.125rem;
   color: #250704;
-  padding: 18px 10px;
+  padding: 18px 50px 18px 10px;
   background: transparent;
   border-bottom: 1px solid #ea5546;
 }
@@ -348,6 +349,26 @@ h6 {
   transition: opacity 150ms ease 0s;
 }
 
+.form__input._valid ~ .form__check {
+  display: block;
+  position: absolute;
+  right: 1.2em;
+  bottom: 1.6em;
+  top: 1.8em;
+  width: 18px;
+  height: 18px;
+}
+
+.form__input._valid ~ .form__check::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icons/icons.svg#checkmark") center no-repeat;
+}
+
 .form__button {
   width: 100%;
   min-height: 63px;
@@ -368,6 +389,12 @@ h6 {
 .form__link {
   color: inherit;
   text-decoration: underline;
+}
+
+.form .error {
+  font-size: 1rem;
+  color: #ea5546;
+  padding: 5px 0px;
 }
 
 .input-label {
@@ -1209,8 +1236,11 @@ h6 {
 
 .contacts__map {
   position: relative;
-  padding: 0px 0px 100% 0px;
   border: 1px solid #ea5546;
+}
+
+.contacts__map iframe {
+  height: 288px;
 }
 
 .contacts__map img {
@@ -1270,19 +1300,21 @@ h6 {
   top: 0.7em;
   width: 44px;
   height: 44px;
-  -webkit-transition: background-color 150ms ease;
-  -o-transition: background-color 150ms ease;
-  transition: background-color 150ms ease;
+  -webkit-transition: all 150ms ease;
+  -o-transition: all 150ms ease;
+  transition: all 150ms ease;
 }
 
 .popup__close svg {
   fill: #ea5546;
 }
 
+.popup__close:hover,
 .popup__close:active {
   background-color: #ea5546;
 }
 
+.popup__close:hover svg,
 .popup__close:active svg {
   fill: #fff;
 }
@@ -1582,6 +1614,9 @@ body._lock {
     display: grid;
     -ms-grid-columns: auto 30px 60.5%;
     grid-template-columns: auto 30px 60.5%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 
   .contacts__content {
@@ -1593,7 +1628,10 @@ body._lock {
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
     grid-column: 3/4;
-    padding: 0px 0px 400px 0px;
+  }
+
+  .contacts__map iframe {
+    height: 400px;
   }
 
   .popup__body {
