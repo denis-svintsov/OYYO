@@ -2237,12 +2237,6 @@ body._lock {
     -o-object-fit: cover;
        object-fit: cover;
   }
-
-  .specialists__item--second .swiper-slide .slider-specialists__image {
-    -webkit-transform: scale(-1, 1);
-        -ms-transform: scale(-1, 1);
-            transform: scale(-1, 1);
-  }
 }
 
 @media (max-width: 991px) {
