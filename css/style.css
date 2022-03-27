@@ -203,7 +203,9 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
   background: rgba(234, 85, 70, 0.05);
   border-radius: 50%;
@@ -801,9 +803,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -844,9 +844,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -872,9 +870,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
 }
 
 .teachers-service__text::before {
@@ -894,9 +890,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-items: flex-start;
   text-align: right;
   margin-left: 0.7em;
   font-weight: 500;
@@ -1066,9 +1060,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-items: center;
 }
 
 .other-services__teacher::before {
@@ -1235,6 +1227,122 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 300ms ease 0s;
+  -o-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+  padding: 0px 15px;
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.popup._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__overlay {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto, 538px);
+  grid-template-columns: minmax(auto, 538px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f6f5f1;
+}
+
+.popup__body {
+  position: relative;
+}
+
+.popup__close {
+  position: absolute;
+  right: 0.7em;
+  top: 0.7em;
+  width: 44px;
+  height: 44px;
+  -webkit-transition: background-color 150ms ease;
+  -o-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+}
+
+.popup__close svg {
+  fill: #ea5546;
+}
+
+.popup__close:active {
+  background-color: #ea5546;
+}
+
+.popup__close:active svg {
+  fill: #fff;
+}
+
+.popup__content {
+  border: 1px solid #ea5546;
+  padding: 55px 20px 20px;
+}
+
+.popup__content > *:last-child {
+  margin-bottom: 0;
+}
+
+.popup__header {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.popup__header > * {
+  margin-bottom: 10px;
+}
+
+.popup__header > *:last-child {
+  margin-bottom: 0;
+}
+
+.popup__title {
+  font-family: "Gardens CM";
+  font-size: 1.5rem;
+  line-height: 110%;
+}
+
+.popup__subtitle {
+  line-height: 120%;
+}
+
+.popup__subtitle span {
+  color: #ea5546;
+}
+
+.popup__form {
+  padding: 0;
+  display: block;
+}
+
+.popup__form .form__line {
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.popup__form .form__button {
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -1489,6 +1597,35 @@ body._lock {
     grid-column: 3/4;
     padding: 0px 0px 400px 0px;
   }
+
+  .popup__body {
+    padding: 54px;
+  }
+
+  .popup__close {
+    right: 0;
+    top: 0;
+  }
+
+  .popup__content {
+    padding: 35px 30px 30px;
+  }
+
+  .popup__header {
+    margin-bottom: 30px;
+  }
+
+  .popup__header > * {
+    margin-bottom: 20px;
+  }
+
+  .popup__title {
+    font-size: 2rem;
+  }
+
+  .popup__subtitle {
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 922px) {
@@ -1701,6 +1838,10 @@ body._lock {
 
   .services__header {
     margin-bottom: 70px;
+  }
+
+  .other-services__item {
+    cursor: pointer;
   }
 
   .other-services__icon:hover {

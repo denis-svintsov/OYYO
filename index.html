@@ -3,9 +3,9 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220326150253" />
-   <link rel="stylesheet" href="css/style.min.css?_v=20220326150253">
-   <script defer="defer" src="js/app.min.js?_v=20220326150253"></script>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css?_v=20220327110549" />
+   <link rel="stylesheet" href="css/style.min.css?_v=20220327110549">
+   <script defer="defer" src="js/app.min.js?_v=20220327110549"></script>
    <title>ОЙЙО</title>
 </head>
 
@@ -112,7 +112,8 @@
                      <li class="list__item">Программа составлена преподавателем с 15-летним опытом</li>
                      <li class="list__item">Задействуйте все мышцы тела, не вставая с коврика</li>
                   </ul>
-                  <button class="header-block__button button button--white"><span>Записаться на занятие</span></button>
+                  <a href="#popup-detail" class="header-block__button button button--white popup-link"><span>Записаться
+                        на занятие</span></a>
                </section>
             </div>
          </header>
@@ -307,7 +308,8 @@
                                  </div>
                               </div>
                               <div class="item-service__price">от <span>400 ₽</span> за одно занятие</div>
-                              <button class="item-service__button button button--red">Подробнее</button>
+                              <a href="#popup-detail"
+                                 class="item-service__button button button--red popup-link">Подробнее</a>
                               <div class="item-service__info">Для начинающих и продвинутых</div>
                            </div>
                         </article>
@@ -336,7 +338,8 @@
                                  </div>
                               </div>
                               <div class="item-service__price">от <span>500 ₽</span> за одно занятие</div>
-                              <button class="item-service__button button button--red">Подробнее</button>
+                              <a href="#popup-detail"
+                                 class="item-service__button button button--red popup-link">Подробнее</a>
                               <div class="item-service__info">Для начинающих и продвинутых</div>
                            </div>
                         </article>
@@ -365,7 +368,8 @@
                                  </div>
                               </div>
                               <div class="item-service__price">от <span>500 ₽</span> за одно занятие</div>
-                              <button class="item-service__button button button--red">Подробнее</button>
+                              <a href="#popup-detail"
+                                 class="item-service__button button button--red popup-link">Подробнее</a>
                               <div class="item-service__info">Для всех уровней подготовки!</div>
                            </div>
                         </article>
@@ -396,7 +400,8 @@
                                  </div>
                               </div>
                               <div class="item-service__price">от <span>500 ₽</span> за одно занятие</div>
-                              <button class="item-service__button button button--red">Подробнее</button>
+                              <a href="#popup-detail"
+                                 class="item-service__button button button--red popup-link">Подробнее</a>
                               <div class="item-service__info">Для всех уровней подготовки!</div>
                            </div>
                         </article>
@@ -474,7 +479,8 @@
                            </tr>
                         </tbody>
                      </table>
-                     <button class="other-services__button button button--white">Записаться на занятие</button>
+                     <a href="#popup-detail" class="other-services__button button button--white popup-link">Записаться
+                        на занятие</a>
                   </div>
                </article>
             </div>
@@ -591,8 +597,8 @@
                </div>
             </div>
             <div class="ui__item">
-               <button class="button button--white ui__item">Записаться на занятие</button>
-               <button class="button button--red ui__item">Подробнее</button>
+               <a href="#popup-detail" class="button button--white ui__item popup-link">Записаться на занятие</a>
+               <a href="#popup-detail" class="button button--red ui__item popup-link">Подробнее</a>
             </div>
             <div class="ui__item">
                <div class="spoiler__button icon">
@@ -647,6 +653,47 @@
          <use href="img/icons/icons.svg#up-arrow"></use>
       </svg>
    </div>
+
+   <div id="popup-detail" class="popup popup-detail">
+   <div class="popup__overlay">
+      <div class="popup__body">
+         <div class="popup__close icon">
+            <svg width="24" height="24">
+               <use href="img/icons/burger-close.svg#close"></use>
+            </svg>
+         </div>
+         <div class="popup__content">
+            <header class="popup__header">
+               <div class="popup__title">Узнать подробнее</div>
+               <div class="popup__subtitle">
+                  <span>Оставьте свои контакты</span> и наш классный менеджер ответит на все вопросы!
+               </div>
+            </header>
+            <form action="#" class="popup__form form">
+               <div class="form__line">
+                  <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                  <label class="input-label">Ваше имя</label>
+               </div>
+               <div class="form__line">
+                  <input type="text" class="form__input" name="phone_number" placeholder="Номер телефона">
+                  <label class="input-label">Номер телефона</label>
+               </div>
+               <div class="form__line">
+                  <button type="submit" class="form__button button button--red">Получить консультацию</button>
+               </div>
+               <div class="form__attention">
+                  <p>
+                     Нажимая на кнопку «Получить консультацию», я соглашаюсь с <a class="form__link" href="#"> политикой
+                        обработки
+                        персональтных
+                        данных</a>
+                  </p>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
 </body>
 
 </html>
